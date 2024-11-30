@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins: wght@300;400;500;600&display=swap");
+:root {
+	--primary-color-hue:  252;
+	--dark-color-lightness: 17%;
+	--light-color-lightness: 95%;
+	--white-color-lightness: 100%;
+
+	--color-white: hsl(252, 30%, var(--white-color-lightness));
+	--color-light: hsl(252,30%, var(--light-color-lightness));
+	--color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+	--color-primary:  hsl(var(--primary-color-hue), 75%,60%);
+	--color-secondary: hsl(252,100%,90%);
+	--color-success: hsl(120, 95%, 65%);
+	--color-danger: hsl(0,95%,65%);
+	--color-dark: hsl(252, 30%, var(--dark-color-lightness));
+	--color-black: hsl(252,30%,10%);
+
+	--border-radius:  2rem;
+	--card-border-radius:  1rem;
+	--btn-padding: 0.6rem 2rem;
+	--search-padding: 0.6rem 1rem;
+	--card-padding: 1rem;
+
+	--sticky-top-left: 5.4rem;
+	--sticky-top-right: -18rem;
+
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	border: none;
+
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: var(--color-dark);
+	background:var(--color-light);
+	overflow-x: hidden;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+
+}
+
+.profile-picture {
+	width: 2.7rem;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	overflow: hidden;
+
+}
+
+img {
+	display: block;
+	width: 100%;
+
+}
+
+.btn {
+	display: inline-block;
+	padding: var(--btn-padding);
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: all 300ms ease;
+	font-size: 0.9rem;
+
+}
+
+.btn:hover {
+	opacity: 0.8;
+
+}
+
+.btn-primary{ 
+	background: var(--color-primary);
+	color: white;
+}
+
+.text-bold {
+	font-weight: 500;
+ }
+
+.text-muted {
+	color: var(--color-gray);
+}
+
+nav{
+	width: 100%;
+	background: var(--color-white);
+	padding: 0.7rem 0;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+nav .container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.search-bar{
+	background: var(--color-light);
+	border-radius: var(--border-radius);
+	padding: var(--search-padding);
+}
+
+.search-bar input[type="search"]{
+	background: transparent;
+	width: 30vw;
+	margin-left: 1rem;
+	font-size: 0.9rem;
+	color: var(--color-black);
+}
+
+nav .search-bar input[type="search"]::placeholder{
+	color: var(--color-gray);
+}
+
+nav .create{
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+nav .container a {
+	text-decoration: none;
+	color: black;
+}
+
+.submit {
+	align-items: center;
+	text-align: center;
+	margin: 1rem auto;
+}
+
+.submit_btn {
+	background-color: var(--color-primary);
+	border-radius: var(--border-radius);
+	padding: var(--btn-padding);
+	cursor: pointer;
+	color: white;
+}
+
+.submit_btn:hover {
+	opacity: 0.5;
+}
+
+main{
+	position: relative;
+	top: 5.4rem;
+}
+/*LOGIN FORM*/
+
+form {
+	background-repeat: no-repeat ;
+	background-position: center;
+	background-size: cover;
+	width: 60rem;
+	height: 30rem;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: var(--card-padding);
+	background: rgba(500, 500, 500, .5);
+	border-radius: var(--border-radius);
+}
+
+ 
+ .form .labels {
+ 	display: flex;
+ 	flex-direction: column;
+ 	width: 50%;
+ 	
+ }
+
+ .form .labels label {
+ 	padding: var(--card-padding);
+ }
+
+ .form .inputs {
+ 	display: flex;
+ 	flex-direction: column;
+ 	width: 50%;
+ 	
+ }
+
+ .form .inputs input {
+ 	padding: var(--search-padding);
+ 	border-radius: var(--border-radius);
+ 	margin: 5px;
+ }
